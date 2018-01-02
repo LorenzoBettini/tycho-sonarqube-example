@@ -11,7 +11,11 @@
   <packaging>pom</packaging>
 
   <properties>
-    <tycho.testArgLine></tycho.testArgLine>
+    <!-- this will be overridden in jacoco profile with tycho.testArgLine, 
+      which, in turn, will be set by Jacoco prepare-agent goal. This property can 
+      then be used in argLine for custom tycho-surefire configuration, both when 
+      Jacoco is used and when it is not used. -->
+    <additionalTestArgLine></additionalTestArgLine>
     <jacoco-version>0.7.9</jacoco-version>
   </properties>
 
@@ -21,6 +25,10 @@
       <activation>
         <activeByDefault>false</activeByDefault>
       </activation>
+      <properties>
+        <!-- This will be set by Jacoco prepare-agent goal -->
+        <additionalTestArgLine>${tycho.testArgLine}</additionalTestArgLine>
+      </properties>
       <build>
         <plugins>
           <plugin>
