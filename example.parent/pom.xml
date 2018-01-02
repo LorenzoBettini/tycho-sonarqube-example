@@ -20,6 +20,11 @@
     <sonar.jacoco.reportPaths>
       ../${project.artifactId}.tests/target/jacoco.exec
     </sonar.jacoco.reportPaths>
+
+    <!-- Example of skipping code coverage (comma separated Java files). -->
+    <sonar.coverage.exclusions>
+      **/plugin1/Main.java
+    </sonar.coverage.exclusions>
   </properties>
 
   <modules>
