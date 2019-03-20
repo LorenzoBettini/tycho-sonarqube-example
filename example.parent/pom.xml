@@ -26,6 +26,13 @@
     <sonar.coverage.exclusions>
       **/plugin1/Main.java
     </sonar.coverage.exclusions>
+
+    <sonar.issue.ignore.multicriteria>e13</sonar.issue.ignore.multicriteria>
+
+    <!-- Tests should include assertions In this test we do not always need 
+      assertions, and we also use custom methods for asserting a few things -->
+    <sonar.issue.ignore.multicriteria.e13.ruleKey>squid:S2699</sonar.issue.ignore.multicriteria.e13.ruleKey>
+    <sonar.issue.ignore.multicriteria.e13.resourceKey>**/*Test.java</sonar.issue.ignore.multicriteria.e13.resourceKey>
   </properties>
 
   <modules>
