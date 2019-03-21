@@ -1,23 +1,13 @@
-sudo: false
-
 language: java
 
 jdk: oraclejdk8
 
 addons:
   sonarcloud:
-    branches:
-      # by default Sonarqube analysis is skipped in all branches but master,
-      # list here all the branches you want Sonarqube analysis to be executed
-      - sonarcloud
-      - master
     organization: "lorenzobettini-github"
     # required for Sonarcloud access
     token:
-      secure: "BuQ2wjmZhwYIoyg0tr6i3rRQGCl2DL8FLNyJTW6zraDnoKsEpe0rsLeMJKIGEe6xSCxoXuFwyHfE5n1aiENaxUSXNd8C8bP0hF5ijamZYv5M4ol+1Bomwc/1zXjgElCikq+7cfV2OOeoJsU3MJpEcLWNYc++GnH7Mje3eTyK8X1eKb0DfjfBbxQ28/6CAdNU1oq/0hxpbGSwHkodG8/tsSucjeaMC0xWmvibbLuDIHDzr2P9Ls9vuqzSkDvSImlL68SthF0IAmEND4PSGRLjYgsT8TqeSf+sEfKmrivibd9Wy9EO7Nq6YfJmU1wUf+Hsfqb07qXJl0aJDAa3eplMOeA8gLB36k77MsIfxLAXkz0WKcPVAtK9qDq8VhlApg9zacEZW+RQCRmDKjOiyPlJFGbG7lRwQN/VKQYbnxLj8BzGc+XIA7a0IQZZoHN4WU0STFu3/En1trsuF6YQ/s+/BTbaxl/XPxdAQ95AIZEqmU/3U+pAAL4R+DJ9r2dAp3xSTjzG7faioUYZuB7eHaujPUnjTEE6klbJXHJUXRdbMynC6WWdvTo9wMf25XPI0J6VK/DpUiTfI5Z2mtc8zUySVZ2LP8mQt1CVKBEtxwpkm2E11xRwyNkvLoHZR6gj3yGWXO/3PEsxuNuMfMmCoH4B2nVHi965JMoJrLcqSYjMTj4="
-    # required for Sonarqube analysis on internal PR
-    github_token:
-      secure: "Z2/0mPexNLr4hqwtpcElH5g4n4+2KX5rC42kWVBeCrDsDru5Sb5oeQAYxGyh9XmSJZn4bIY2mxUMTmfZtVCptt1qOGsPodOH+Qkm0F/rb6URSHRv9lWhKHA8k3XovIot3LpZS2OoDYTedkUxFurmW4EvQRPt+4YvBqbE9WUILWCAozZ6MLw8V9lK8LI6tHZhXFSFIqq2d5SDGIM/l2pOF/17q72P/+PhzEP0ByMgH9pvMoBIVJXuYwjNGm3uxaxdNv5d4xQfNPhWPs2KQPI8V2AOSam0xHX52tZnBbte+0VCMGJ24OWq5RkvXtT2h44KBuRFHdo+mwi0TMj4H5PgsTQUIhJvrIMYGLI/TaXU33B68F7myZ6iRKc7GfuvlXFt015AOEdExP3fBZjkBD+fSTvL2D8XZhyGFUgyWCB0WLsoS5ESLxq23eJNo1vdRNryYI/oUCNFJ5LYCOUdU9iB2AlPqQuXK3RDroS3qM7N7NIvuW0V2LNRuRA5svFIVmXi6vkaTjQkIyl1V1NBYKbJqyD0u+6XRF/jQ8aXtTMcleHMr5dRjoEHPcK7uuUEgXHRwTjx9GQIy9Xxcw23MvqCEsZheP9NBCEW15l6MqCjs631jrj0XjHNEXlhSUtmtJHA51D0N3u5sWtFKaWpULskFqrVgEpuBqP+/SioAyOZAIY="
+      secure: $SONAR_TOKEN
 
 cache:
   directories:
