@@ -16,7 +16,7 @@
       then be used in argLine for custom tycho-surefire configuration, both when 
       Jacoco is used and when it is not used. -->
     <additionalTestArgLine></additionalTestArgLine>
-    <jacoco-version>0.7.9</jacoco-version>
+    <jacoco-version>0.8.3</jacoco-version>
 
     <!-- Workaround for https://bugs.eclipse.org/bugs/show_bug.cgi?id=397015 -->
     <sonar.sources></sonar.sources>
