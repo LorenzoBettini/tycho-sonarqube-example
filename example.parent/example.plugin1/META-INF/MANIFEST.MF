@@ -5,3 +5,4 @@ Bundle-SymbolicName: example.plugin1
 Bundle-Version: 0.0.1.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: example.plugin1
+Require-Bundle: org.apache.log4j;bundle-version="1.2.15"
