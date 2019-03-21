@@ -8,4 +8,4 @@ Note: Code coverage is not 100% by intention ;)
 
 [![Coverage Status](https://coveralls.io/repos/github/LorenzoBettini/tycho-sonarqube-example/badge.svg?branch=master)](https://coveralls.io/github/LorenzoBettini/tycho-sonarqube-example?branch=master)
 
-[![Quality Gate](https://sonarcloud.io/api/badges/gate?key=example%3Aexample.parent)](https://sonarcloud.io/dashboard?id=example%3Aexample.parent)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=example%3Aexample.parent&metric=alert_status)](https://sonarcloud.io/dashboard?id=example%3Aexample.parent)
